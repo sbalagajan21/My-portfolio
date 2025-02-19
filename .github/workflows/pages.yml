@@ -12,25 +12,18 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    container:
-      image: alpine:latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          path: .  # Explicitly set working directory
       - name: Build and Deploy
         run: |
-          # mkdir public (Commented out)
-          # cp -r index.html styles.css images Resume public/ (Commented out)
-          ls -l public # List files to confirm they are there
+          mkdir public
+          cp -r index.html styles.css images Resume public/
       - name: Upload Artifact
         id: upload_step
         uses: actions/upload-artifact@v4
         with:
           name: website
           path: public
-      - name: Verify Artifact Contents
-        run: ls -l public  # Verify artifact contents
   deploy:
     needs: build-and-deploy
     runs-on: ubuntu-latest
