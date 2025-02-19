@@ -18,7 +18,7 @@ jobs:
       - name: Build and Deploy
         run: |
           mkdir public
-          cp -r index.html styles.css images Resume .htaccess public/
+          cp -r index.html styles.css images Resume public/
       - name: Upload Artifact # Add this step to upload the artifact
         uses: actions/upload-artifact@v4
         with:
