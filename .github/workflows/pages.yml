@@ -10,30 +10,17 @@ permissions:
   pages: write
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: website
-          path: public  # Upload the existing public folder
   deploy:
-    needs: build-and-deploy
     runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
     steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: website
-          path: public
+      - uses: actions/checkout@v3
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
         with:
-          build_dir: public  # Configure GitHub Pages to use the downloaded public folder
+          build_dir: .  # Use the root directory as the build directory
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:
