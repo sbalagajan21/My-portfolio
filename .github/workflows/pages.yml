@@ -25,18 +25,18 @@ jobs:
         with:
           name: website
           path: public
-  deploy: # New job for deployment
-    needs: build-and-deploy # Needs the build job to complete
+  deploy:
+    needs: build-and-deploy
     runs-on: ubuntu-latest
     permissions:
-      pages: write # Required permission for deployment
+      pages: write
       id-token: write
     steps:
       - uses: actions/download-artifact@v4
-        with:
-          name: website
-          path: public
+        with:  # Two spaces indentation here
+          name: website # Two spaces indentation here
+          path: public # Two spaces indentation here
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
-        with:
-          # folder: public # No folder needed with download-artifact
+        with:  # Two spaces indentation here
+          artifact_name: website # Two spaces indentation here
