@@ -10,7 +10,7 @@ html {
   }
 
 .navbar{
-    background-image: url('/images/background-image.avif'); 
+    background-image: url('images/background-image.avif'); 
     background-size: cover; /* This is the key to making it one image */
     background-position: center; 
     height: 650px;
