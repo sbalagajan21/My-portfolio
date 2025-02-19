@@ -1,0 +1,22 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Or your main branch name
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # You can also use a smaller image here if needed
+    container: # Use a docker container to run the build process
+      image: alpine:latest # Use the alpine image
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and Deploy # Name the step
+        run: |
+          mkdir public
+          cp -r index.html styles.css images Resume public/
+      - uses: actions/deploy-pages@v1
+        with:
+          branch: main # Or your main branch name
+          folder: public # The folder where the built website is located
