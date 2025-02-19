@@ -33,7 +33,7 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4 # Download the artifact
         with:
           name: website
           path: public
@@ -42,8 +42,6 @@ jobs:
         with:
           build_dir: public
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v2
         with:
           environment: github-pages
-          needs: configure-pages
