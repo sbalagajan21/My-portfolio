@@ -3,20 +3,22 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main # Or your main branch name
+      - main
+
+permissions: # Add this section at the top level
+  id-token: write # Grant permission to write the ID token
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest # You can also use a smaller image here if needed
-    container: # Use a docker container to run the build process
-      image: alpine:latest # Use the alpine image
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build and Deploy # Name the step
+      - name: Build and Deploy
         run: |
           mkdir public
           cp -r index.html styles.css images Resume public/
       - uses: actions/deploy-pages@v1
         with:
-          branch: main # Or your main branch name
-          folder: public # The folder where the built website is located.
+          folder: public  # No need to specify branch, it uses the pushed branch
