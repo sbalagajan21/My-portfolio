@@ -7,7 +7,7 @@ on:
 
 permissions:
   id-token: write
-  pages: write # Add this permission
+  pages: write
 
 jobs:
   build-and-deploy:
@@ -38,14 +38,12 @@ jobs:
           name: website
           path: public
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v3 # Use the correct action
+        uses: actions/configure-pages@v3
         with:
-          build_dir: public # The directory containing your static files
+          build_dir: public
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2  # Use the deploy action
+        uses: actions/deploy-pages@v2
         with:
-          needs: configure-pages # Deploy depends on configure-pages
           environment: github-pages
-          permissions:
-            pages: write
+          needs: configure-pages
