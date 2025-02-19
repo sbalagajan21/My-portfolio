@@ -19,12 +19,14 @@ jobs:
         run: |
           mkdir public
           cp -r index.html styles.css images Resume public/
-      - name: Upload Artifact # Add this step to upload the artifact
+      - name: Upload Artifact
+        id: upload_step # Add an ID to the upload step
         uses: actions/upload-artifact@v4
         with:
-          name: website # Give your artifact a name (can be anything)
-          path: public  # The path to the directory you want to upload
-      - uses: actions/deploy-pages@v1
+          name: website
+          path: public
+      - name: Deploy to GitHub Pages
+        needs: upload_step # Make the deploy step depend on the upload step
+        uses: actions/deploy-pages@v1
         with:
-          artifact_name: website # The name of the artifact you uploaded
-          # folder: public  # Remove folder, artifact_name handles this
+          artifact_name: website
