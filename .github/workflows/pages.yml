@@ -20,7 +20,7 @@ jobs:
           mkdir public
           cp -r index.html styles.css images Resume .htaccess public/
       - name: Upload Artifact # Add this step to upload the artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: website # Give your artifact a name (can be anything)
           path: public  # The path to the directory you want to upload
