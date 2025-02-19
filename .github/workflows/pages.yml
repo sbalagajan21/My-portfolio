@@ -5,8 +5,8 @@ on:
     branches:
       - main
 
-permissions: # Add this section at the top level
-  id-token: write # Grant permission to write the ID token
+permissions:
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -17,8 +17,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build and Deploy
         run: |
-          mkdir public
-          cp -r index.html styles.css images Resume public/
+          # The files are already in the public folder thanks to checkout
+          echo "Building website..." # (Add any build commands here if needed)
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: website # Choose any name for your artifact
+          path: public # Path to the public folder in the container
       - uses: actions/deploy-pages@v1
         with:
-          folder: public  # No need to specify branch, it uses the pushed branch
+          artifact_name: website # Must match the artifact name above
