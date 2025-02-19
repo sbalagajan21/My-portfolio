@@ -20,13 +20,23 @@ jobs:
           mkdir public
           cp -r index.html styles.css images Resume public/
       - name: Upload Artifact
-        id: upload_step # Add an ID to the upload step
+        id: upload_step
         uses: actions/upload-artifact@v4
         with:
           name: website
           path: public
+  deploy: # New job for deployment
+    needs: build-and-deploy # Needs the build job to complete
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write # Required permission for deployment
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: website
+          path: public
       - name: Deploy to GitHub Pages
-        needs: upload_step # Make the deploy step depend on the upload step
         uses: actions/deploy-pages@v1
         with:
-          artifact_name: website
+          # folder: public # No folder needed with download-artifact
