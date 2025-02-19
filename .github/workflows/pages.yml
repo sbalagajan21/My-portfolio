@@ -15,20 +15,16 @@ jobs:
       image: alpine:latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          path: my-portfolio # Checkout into a subfolder
       - name: Build and Deploy
-        working-directory: my-portfolio # Change the working directory
         run: |
           mkdir public
           cp -r index.html styles.css images Resume .htaccess public/
-      - name: Upload Artifact
+      - name: Upload Artifact # Add this step to upload the artifact
         uses: actions/upload-artifact@v3
         with:
-          name: website
-          path: my-portfolio/public
+          name: website # Give your artifact a name (can be anything)
+          path: public  # The path to the directory you want to upload
       - uses: actions/deploy-pages@v1
         with:
-          artifact_name: website
-
-    
+          artifact_name: website # The name of the artifact you uploaded
+          # folder: public  # Remove folder, artifact_name handles this
