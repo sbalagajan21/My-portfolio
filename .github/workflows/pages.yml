@@ -33,10 +33,10 @@ jobs:
       id-token: write
     steps:
       - uses: actions/download-artifact@v4
-        with:  # Two spaces indentation here
-          name: website # Two spaces indentation here
-          path: public # Two spaces indentation here
+        with: 
+          name: website 
+          path: public 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
-        with:  # Two spaces indentation here
-          artifact_name: website # Two spaces indentation here
+        with:  
+          artifact_name: website 
