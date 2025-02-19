@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balagajan's portfolio</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar border">
+        <div class="navbar__container">
+            <a href="#" id="navbar__logo">BALAGAJAN PORTFOLIO</a>
+            <div class="navbar__toggle" id="mobile-menu">
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#about" class="navbar__links">ABOUT ME</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#Skills" class="navbar__links">SKILLS</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#experience" class="navbar__links">EXPERIENCE</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#education" class="navbar__links">EDUCATION & CERTIFICATIONS</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="#contact" class="button">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+        <div class="profile">
+            <div class="profile__img">
+                <img src="/images/My image 01.jpg" alt="pic">
+            </div>
+            <div class="profile__content">
+                <h1><b>BALAGAJAN SATHANANDA</b></h1>
+                <h2><b>DEVOPS ENGINEER</b></h2>
+            </div>
+            <button class="resume--download" onclick="downloadResume()">DOWNLOAD RESUME</button>
+            <script>
+                function downloadResume() {
+                    const resumePath = '/Resume/Resume - Balagajan.docx'; 
+
+                    const link = document.createElement('a');
+                    link.href = resumePath;
+                    link.download = 'Resume - Balagajan.docx'; 
+                    link.style.display = 'none'; 
+                    document.body.appendChild(link);
+                    link.click(); 
+                    document.body.removeChild(link); 
+                }
+            </script>
+        </div>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="about__container">
+            <div class="about__details">
+                <h2><b>ABOUT</b></h2>
+                <ul>
+                    <li>Skilled Engineer with over 4 years of hands-on experience in designing, automating, and managing cloud infrastructure across AWS, GCP, and Azure environments</li>
+                    <li>Engaged in Infrastructure as Code (IaC) using Terraform and Ansible, container orchestration with Kubernetes, and automated deployment pipelines with GitLab and Jenkins</li>
+                    <li>Proven track record in cost optimization by rightsizing resources, automating non-critical processes, and enhancing infrastructure monitoring with Datadog, Prometheus, and Grafana</li>
+                    <li>Automated 80% of resource provisioning and job scheduling workflows, resulting in an 80% reduction in deployment times and significantly improved system scalability and reliability</li>
+                    <li>Strong advocate of DevOps culture, with a focus on automation, collaboration, and continuous improvement to deliver high-performing, secure, and scalable solutions</li>
+                    <li>Experienced in incident resolution, root cause analysis, and cross-functional team collaboration, ensuring efficient problem-solving and operational excellence</li>
+                </ul>
+            </div>
+            <div class="about__info">
+                <h3>Basic Information</h3>
+                <p><strong>Date of Birth:</strong> October 21, 1995</p>
+                <p><strong>Email:</strong> sbalagajan21@gmail.com</p>
+                <p><strong>Phone:</strong> +1 437-868-1995</p>
+                <p><strong>Address:</strong> Toronto, Canada</p>
+                <p><strong>Languages:</strong> Tamil, English, Sinhala, Hindi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Skills" class="Skills">
+        <div class="Skills__container">
+            <div class="Skills__details">
+                <h2><b>SKILLS</b></h2>
+                <ul class="skills-list">
+                    <li><b>Languages & Frameworks:</b> Python, JavaScript, React, Angular, HTML, CSS</li>
+                    <li><b>Cloud Platforms:</b> AWS, Azure, GCP</li>
+                    <li><b>Database:</b> Relational (MySQL, PostgreSQL, SQL Server), NoSQL (DynamoDB)</li>
+                    <li><b>Tools & Technologies:</b> Git/GitHub, Terraform, Jenkins, Docker, Kubernetes, CloudFormation</li>
+                    <li><b>DevOps & CI/CD:</b> GitHub Actions, Jenkins</li>
+                    <li><b>Monitoring & Observability:</b> CloudWatch, custom metrics, Datadog, Prometheus</li>
+                    <li><b>Scripting:</b> Python, Bash, Shell scripting</li>
+                    <li><b>Containers & Orchestration:</b> Docker, Kubernetes</li>
+                    <li><b>Web & Application Servers:</b> Apache, Nginx, Tomcat</li>
+                    <li><b>DevOps Tools:</b> Git, GitLab, SonarQube, Nagios, Grafana, Ansible</li>
+                    <li><b>Other:</b> Agile Scrum/Kanban, ITIL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="experience__container">
+            <div class="experience__details">
+                <h2><b>EXPERIENCE</b></h2>
+                <ul class="experience-list">
+                    <li>
+                        <h3><b>Site Reliability Engineer (Co-Op)</b></h3>
+                        <p><b>Blue Lotus X Inc, Scarborough, Ontario (September 2024 – December 2024)</b></p>
+                        <ul>
+                            <li>Automated microservice deployments to AKS using an Azure DevOps CI/CD pipeline, reducing manual deployment effort by 20% and significantly decreasing the time to release</li>
+                            <li>Implemented blue/green deployments to ensure seamless transitions and minimize disruptions</li>
+                            <li>Collaborated with the development team in Agile sprints to deliver bi-weekly updates and features, while adhering to strict security and compliance requirements</li>
+                            <li>Successfully documented all installations and configurations</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><b>DevOps Engineer (Internship)</b></h3>
+                        <p><b>iVedha Inc, Toronto, Ontario (July 2023 - November 2023)</b></p>
+                        <ul>
+                            <li>Integrated Kubernetes to run SLURM jobs as pods, leveraging Kubernetes for resource management, scaling, and high availability</li>
+                            <li>Developed Bash scripts to automate Azure resource provisioning, ensuring efficient scaling of HPC resources and seamless job scheduling via SLURM</li>
+                            <li>Leveraged Azure VMs and Kubernetes for dynamic scaling of HPC resources, reducing infrastructure costs by 30% during peak demand</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><b>Site Reliability Engineer</b></h3>
+                        <p><b>Sysco LABS Technologies, Sri Lanka (August 2020 - May 2023)</b></p>
+                        <ul>
+                            <li>Developed a scalable order processing system using a microservices architecture with Node.js and Angular for the frontend, containerized with Docker and deployed on Azure Container Instances</li>
+                            <li>Optimized complex stored procedures using SQL, resulting in a 25% improvement in the performance of data retrieval</li>
+                            <li>Integrated Redis caching for frequently accessed data, cutting down redundant database queries by 60% and improving dashboard responsiveness</li>
+                            <li>Set up API monitoring using Prometheus and Grafana to track performance and ensure reliability</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><b>Site Reliability Engineer</b></h3>
+                        <p><b>Sysco LABS Technologies, Sri Lanka (August 2020 - May 2023)</b></p>
+                        <ul>
+                            <li>Implemented Terraform for AKS cluster provisioning, reducing manual setup time by 40% and ensuring consistency across environments</li>
+                            <li>Improved system availability by integrating Kubernetes Horizontal Pod Autoscaler (HPA) and self-healing mechanisms, ensuring seamless order processing under high traffic</li>
+                            <li>Design and implemented an Azure DevOps pipeline for a microservices-based application deployed on Azure Kubernetes Service</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><b>Site Reliability Engineer</b></h3>
+                        <p><b>Sysco LABS Technologies, Sri Lanka (August 2020 - May 2023)</b></p>
+                        <ul>
+                            <li>Designed cost-efficient cloud infrastructure on Azure using IaC with Terraform, leveraging Azure Monitor and cost management tools for monitoring and optimization</li>
+                            <li>Improved overall system reliability by configuring Azure Monitor alerts integrated with Azure DevOps for notifications and incident management, reducing incident response times by 40%</li>
+                            <li>Created Datadog email alerts and notifications to communicate health and incident alerts</li>
+                            <li>Applied Azure Role-Based Access Control and Azure AD Privileged Identity Management adhering to the principle of the least privilege, limiting access to Azure resources</li>
+                            <li>Configured Network Security Groups and Azure Firewall to secure traffic and restrict ports, implementing network segmentation and defense-in-depth security</li>
+                            <li>Enhance the access security and user management by successfully integrating Single Sign-On (SSO) for SonarQube with Azure AD</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><b>Junior Network Administrator</b></h3>
+                        <p><b>Rezgateway Pvt Ltd, Sri Lanka (February 2020 - August 2020)</b></p>
+                        <ul>
+                            <li>Monitored data centers and AWS environments, troubleshooting system and network issues using Nagios, Kibana, Splunk and CloudWatch for log monitoring</li>
+                            <li>Managed P1/P2 on-call incidents, ensuring SLA/SLO adherence using ServiceNow and JIRA for seamless incident handling</li>
+                            <li>Reduced incident resolution time by 20% by automating common remediation tasks using scripts and integrating with monitoring systems</li>
+                            <li>Implemented automated maintenance tasks using batch scripts and Windows Task Scheduler, including system reboots, service restarts, and routine maintenance, improving system stability</li>
+                            <li>Authored and maintained technical documentation and knowledge base articles in Confluence, reducing the knowledge gap and improving user self-service capabilities</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <section id="education" class="education">
+        <div class="education__container">
+            <div class="educatio__details">
+                <h2>Education</h2>
+                <ul class="education-list">
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>Postgraduate diploma in DevOps for Cloud Computing, Lambton College</b></li>
+                        </div>
+                        <div class="education--year">
+                            May 2023 – December 2024
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>Bachelor of Engineering in Electronics and Communication, Gujarat Technological University</b></li>
+                        </div>
+                        <div class="education--year">
+                            August 2015 - June 2019
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>Terraform Associate 003</b></li>
+                        </div>
+                        <div class="education--year">
+                            March 2024
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>ITIL v4 Foundation</b></li>
+                        </div>
+                        <div class="education--year">
+                            September 2021
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>AWS Certified Solution Architect</b></li>
+                        </div>
+                        <div class="education--year">
+                            January 2021
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>Microsoft Azure Administrator (AZ-103)</b></li>
+                        </div>
+                        <div class="education--year">
+                            May 2020
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>RedHat Certified Engineer (RHEL 07)</b></li>
+                        </div>
+                        <div class="education--year">
+                            February 2020
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>RedHat Certified System Administrator (RHEL 07)</b></li>
+                        </div>
+                        <div class="education--year">
+                            October 2019
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <li><b>Foundation Course in Human Resource Management</b></li>
+                        </div>
+                        <div class="education--year">
+                            April 2015
+                        </div>
+                    </div>
+                </ul>
+            </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact__container">
+            <div class="contact__menu">
+                <h2>Contact Me</h2>
+                <img src="/images/Vcard.png" alt="pic">
+            </div>
+            <div class="contact__content">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" placeholder="Enter your contact number">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" placeholder="Enter subject">
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+
+                <button>Send</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const responseDiv = document.getElementById('form-response');
+
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form)
+            })
+            .then(response => {
+                if (response.ok) {
+                    responseDiv.innerHTML = "<p style='color: green;'>Message sent successfully!</p>";
+                    form.reset(); // Clear the form
+                } else {
+                    return response.text().then(err => {throw new Error(err)}); // Get error message
+                }
+            })
+            .catch(error => {
+                responseDiv.innerHTML = "<p style='color: red;'>Error sending message: " + error.message + "</p>";
+            });
+        });
+    </script>
+
+</body>
+</html>
