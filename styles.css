@@ -20,13 +20,13 @@ html {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
   top: 0;
   z-index: 999;
 }
 
 .navbar__container {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   height: 80px;
   font-size: medium;
