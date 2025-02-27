@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar border">
+    <nav class="navbar">
         <div class="navbar__container">
             <a href="#" id="navbar__logo">BALAGAJAN PORTFOLIO</a>
             <div class="navbar__toggle" id="mobile-menu">
@@ -39,16 +39,9 @@
             </div>
             <div class="profile__content">
                 <h1><b>BALAGAJAN SATHANANDA</b></h1>
-                <h2><b>DEVOPS ENGINEER</b></h2>
+                <h2><b>AWS Certified DevOps Engineer | Microsoft Certified Azure Administrator | RHCE | RHCSA | Terraform | ITILv4</b></h2>
             </div>
-            <div class="social-links">
-                <a href="https://gitlab.com/sbalagajan" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-gitlab fa-2x"></i> </a>
-                <a href="https://hub.docker.com/repositories/sbalagajan21" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-docker fa-2x"></i>
-                </a>
-            </div>
+            
             <button class="resume--download" onclick="downloadResume()">DOWNLOAD RESUME</button>
             <script>
                 function downloadResume() {
@@ -63,6 +56,17 @@
                     document.body.removeChild(link); 
                 }
             </script>
+            <div class="social-links">
+                <a href="https://hub.docker.com/repositories/sbalagajan21" target="_blank">
+                    <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker Hub">
+                </a>
+                <a href="https://gitlab.com/sbalagajan" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/balagajan-sathananda/" target="_blank">
+                    <img src="images/LinkedIn.png" alt="LinkedIn">
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -71,12 +75,14 @@
             <div class="about__details">
                 <h2><b>ABOUT</b></h2>
                 <ul>
-                    <li>Skilled Engineer with over 4 years of hands-on experience in designing, automating, and managing cloud infrastructure across AWS, GCP, and Azure environments</li>
-                    <li>Engaged in Infrastructure as Code (IaC) using Terraform and Ansible, container orchestration with Kubernetes, and automated deployment pipelines with GitLab and Jenkins</li>
-                    <li>Proven track record in cost optimization by rightsizing resources, automating non-critical processes, and enhancing infrastructure monitoring with Datadog, Prometheus, and Grafana</li>
+                    <li>DevOps Engineer with 5+ years of experience designing, automating, and managing cloud infrastructure (AWS, Azure)</li>
+                    <li>Expertise in Infrastructure as Code (Terraform, Ansible), container orchestration (Kubernetes), and CI/CD pipelines (GitLab, Jenkins, Azure DevOps, AWS CodePipeline)</li>
+                    <li>Proven ability to optimize costs, enhance infrastructure monitoring (Datadog, Prometheus, Grafana), and drive continuous improvement by applying golden signals and RED methodologies to ensure adherence to SLAs/SLIs/SLOs</li>
+                    <li>Experienced in incident management, root cause analysis, and cross-functional team collaboration to ensure operational excellence</li>
                     <li>Automated 80% of resource provisioning and job scheduling workflows, resulting in an 80% reduction in deployment times and significantly improved system scalability and reliability</li>
                     <li>Strong advocate of DevOps culture, with a focus on automation, collaboration, and continuous improvement to deliver high-performing, secure, and scalable solutions</li>
                     <li>Experienced in incident resolution, root cause analysis, and cross-functional team collaboration, ensuring efficient problem-solving and operational excellence</li>
+                    <li>Strong analytical, communication, and problem-solving skills, with experience in troubleshooting complex issues, performing root cause analysis and working effectively in cross-functional teams</li>
                 </ul>
             </div>
             <div class="about__info">
@@ -116,70 +122,71 @@
             <div class="experience__details">
                 <h2><b>EXPERIENCE</b></h2>
                 <ul class="experience-list">
-                    <li>
+                    <li style="margin-bottom: 20px;">
                         <h3><b>Site Reliability Engineer (Co-Op)</b></h3>
                         <p><b>Blue Lotus X Inc, Scarborough, Ontario (September 2024 – December 2024)</b></p>
                         <ul>
-                            <li>Automated microservice deployments to AKS using an Azure DevOps CI/CD pipeline, reducing manual deployment effort by 20% and significantly decreasing the time to release</li>
+                            <li>Automated microservice deployments to AKS using an Azure DevOps pipeline, reducing manual deployment effort from 5 hours to 1 hour per deployment and decreasing time to release by 15%</li>
                             <li>Implemented blue/green deployments to ensure seamless transitions and minimize disruptions</li>
+                            <li>Implemented Sonar CNES report generation with SonarQube and generated report will be sent to relevant team via in CI/CD pipeline</li>
                             <li>Collaborated with the development team in Agile sprints to deliver bi-weekly updates and features, while adhering to strict security and compliance requirements</li>
-                            <li>Successfully documented all installations and configurations</li>
                         </ul>
                     </li>
-                    <li>
+    
+                    <li style="margin-bottom: 20px;">
                         <h3><b>DevOps Engineer (Internship)</b></h3>
                         <p><b>iVedha Inc, Toronto, Ontario (July 2023 - November 2023)</b></p>
+                        <p><b>Project: Scalable HPC Job Scheduling System using SLURM – Code Willing USA</b></p>
                         <ul>
                             <li>Integrated Kubernetes to run SLURM jobs as pods, leveraging Kubernetes for resource management, scaling, and high availability</li>
-                            <li>Developed Bash scripts to automate Azure resource provisioning, ensuring efficient scaling of HPC resources and seamless job scheduling via SLURM</li>
-                            <li>Leveraged Azure VMs and Kubernetes for dynamic scaling of HPC resources, reducing infrastructure costs by 30% during peak demand</li>
+                            <li>Automated the deployment of a microservices application on AWS, leveraging CloudFormation to provision the necessary resources (EC2, ECS, S3, etc.)</li>
+                            <li>Configured Security Groups and Network ACLs to secure traffic and restrict ports, implementing network segmentation and defense-in-depth security</li>
                         </ul>
                     </li>
-                    <li>
+    
+                    <li style="margin-bottom: 20px;">
                         <h3><b>Site Reliability Engineer</b></h3>
                         <p><b>Sysco LABS Technologies, Sri Lanka (August 2020 - May 2023)</b></p>
+                        <p><b>Project: Scalable and Secure Dockerized Order Processing System – Sysco USA</b></p>
                         <ul>
-                            <li>Developed a scalable order processing system using a microservices architecture with Node.js and Angular for the frontend, containerized with Docker and deployed on Azure Container Instances</li>
-                            <li>Optimized complex stored procedures using SQL, resulting in a 25% improvement in the performance of data retrieval</li>
-                            <li>Integrated Redis caching for frequently accessed data, cutting down redundant database queries by 60% and improving dashboard responsiveness</li>
-                            <li>Set up API monitoring using Prometheus and Grafana to track performance and ensure reliability</li>
+                            <li>Developed a scalable order processing system using a microservices architecture with Node.js and Angular, containerized with Docker and deployed on Amazon ECS. This system processes 100+ orders per minute with an average latency of 35 milliseconds</li>
+                            <li>Optimized complex SQL queries for Amazon RDS, resulting in a 25% improvement in the performance of data retrieval (reducing query execution time from 3 seconds to 1.5 seconds)</li>
+                            <li>Integrated Redis caching (ElastiCache) for frequently accessed data, cutting down redundant database queries by 60% and improving dashboard responsiveness</li>
+                            <li>Set up API monitoring using Prometheus and Grafana, applying golden signals (latency, traffic, errors) and RED methodologies (Request rate, Error rate, Duration) to track performance, identify bottlenecks, and ensure reliability.</li>
                         </ul>
                     </li>
-                    <li>
+    
+                    <li style="margin-bottom: 20px;">
                         <h3><b>Site Reliability Engineer</b></h3>
                         <p><b>Sysco LABS Technologies, Sri Lanka (August 2020 - May 2023)</b></p>
+                        <p><b>Project: Automated EKS Cluster Provisioning and CI/CD Pipeline Implementation – Sysco Canada</b></p>
                         <ul>
-                            <li>Implemented Terraform for AKS cluster provisioning, reducing manual setup time by 40% and ensuring consistency across environments</li>
-                            <li>Improved system availability by integrating Kubernetes Horizontal Pod Autoscaler (HPA) and self-healing mechanisms, ensuring seamless order processing under high traffic</li>
-                            <li>Design and implemented an Azure DevOps pipeline for a microservices-based application deployed on Azure Kubernetes Service</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3><b>Site Reliability Engineer</b></h3>
-                        <p><b>Sysco LABS Technologies, Sri Lanka (August 2020 - May 2023)</b></p>
-                        <ul>
-                            <li>Designed cost-efficient cloud infrastructure on Azure using IaC with Terraform, leveraging Azure Monitor and cost management tools for monitoring and optimization</li>
-                            <li>Improved overall system reliability by configuring Azure Monitor alerts integrated with Azure DevOps for notifications and incident management, reducing incident response times by 40%</li>
+                            <li>Implemented Terraform for EKS cluster provisioning on AWS, reducing manual setup time by 40% (from 2 weeks to 1.2 weeks) and ensuring consistency across environments</li>
+                            <li>Improved system availability by integrating Kubernetes Horizontal Pod Autoscaler (HPA) and self-healing mechanisms, ensuring seamless order processing under high traffic. This reduced downtime due to scaling issues by 21%</li>
+                            <li>Designed and implemented an AWS CodePipeline for a microservices-based application deployed on EKS, automating the build, test, and deployment process.</li>
+                            <li>Integrated CodeBuild for building Docker images and ECR (Elastic Container Registry) for storing them</li>
+                            <li>Designed cost-efficient cloud infrastructure on AWS using IaC with Terraform and Ansible, leveraging CloudWatch and AWS Cost Explorer for monitoring and optimization. This reduced cloud infrastructure costs by $1000 each month</li>
+                            <li>Improved overall system reliability by configuring CloudWatch alarms and integrating them with AWS Systems Manager for automated incident response, reducing incident response times by 40% (from 5 minutes to 1 minute)</li>
                             <li>Created Datadog email alerts and notifications to communicate health and incident alerts</li>
-                            <li>Applied Azure Role-Based Access Control and Azure AD Privileged Identity Management adhering to the principle of the least privilege, limiting access to Azure resources</li>
-                            <li>Configured Network Security Groups and Azure Firewall to secure traffic and restrict ports, implementing network segmentation and defense-in-depth security</li>
-                            <li>Enhance the access security and user management by successfully integrating Single Sign-On (SSO) for SonarQube with Azure AD</li>
                         </ul>
                     </li>
-                    <li>
+    
+                    <li style="margin-bottom: 20px;">
                         <h3><b>Junior Network Administrator</b></h3>
                         <p><b>Rezgateway Pvt Ltd, Sri Lanka (February 2020 - August 2020)</b></p>
+                        <p><b>Project: Proactive System Monitoring and Incident Management – Bonotel US</b></p>
                         <ul>
                             <li>Monitored data centers and AWS environments, troubleshooting system and network issues using Nagios, Kibana, Splunk and CloudWatch for log monitoring</li>
-                            <li>Managed P1/P2 on-call incidents, ensuring SLA/SLO adherence using ServiceNow and JIRA for seamless incident handling</li>
+                            <li>Working knowledge of L3 Engineering Support and managed P1/P2 on-call incidents through 24*7 shifts, ensuring SLA/SLO adherence using JIRA and ServiceNow for incident handling</li>
+                            <li>Contributed to the development of error budgets by tracking and analyzing application error rates</li>
                             <li>Reduced incident resolution time by 20% by automating common remediation tasks using scripts and integrating with monitoring systems</li>
-                            <li>Implemented automated maintenance tasks using batch scripts and Windows Task Scheduler, including system reboots, service restarts, and routine maintenance, improving system stability</li>
                             <li>Authored and maintained technical documentation and knowledge base articles in Confluence, reducing the knowledge gap and improving user self-service capabilities</li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
+    </section>
 
     <section id="education" class="education">
         <div class="education__container">
@@ -188,7 +195,7 @@
                 <ul class="education-list">
                     <div class="row">
                         <div class="col-9">
-                            <li><b>Postgraduate diploma in DevOps for Cloud Computing, Lambton College</b></li>
+                            <li><b>Postgraduate Certification in DevOps for Cloud Computing, Lambton College</b></li>
                         </div>
                         <div class="education--year">
                             May 2023 – December 2024
@@ -202,6 +209,7 @@
                             August 2015 - June 2019
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="col-9">
                             <li><b>Terraform Associate 003</b></li>
@@ -289,6 +297,60 @@
         </div>
     </section>
 
+    <!-- <section class="projects-section">
+        <div class="projects-container">
+            <h2 class="projects-title">Projects</h2>
+            <div class="projects-navigation">
+                <span class="nav-previous">&laquo; Previous</span>
+                <span class="nav-page-number">1</span>
+                <span class="nav-next">Next &raquo;</span>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="aws-logo.png" alt="AWS Logo"> 
+                    </div>
+                    <h3 class="project-title">Terraform-aws-s3 Module</h3>
+                    <p class="project-technology">Technology: Terraform and Github Actions</p>
+                    <a href="#" class="project-blog">Read Blog on this Project</a>
+                    <div class="project-links">
+                        <a href="#" class="project-live-demo">Live Demo</a>
+                        <a href="#" class="project-github-link">Github Link</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="birthday-cake.jpg" alt="Birthday Cake">
+                    </div>
+                    <h3 class="project-title">Birthday Application</h3>
+                    <p class="project-technology">Technology: HTML and CSS</p>
+                    <a href="#" class="project-blog">Read Blog on this Project</a>
+                    <div class="project-links">
+                        <a href="#" class="project-live-demo">Live Demo</a>
+                        <a href="#" class="project-github-link">Github Link</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pean-logo.png" alt="PEAN Logo">
+                    </div>
+                    <h3 class="project-title">CRUD operation using PEAN stack</h3>
+                    <p class="project-technology">Technology: Angular 10, Node, PostgreSQL, Express</p>
+                    <a href="#" class="project-blog">Read Blog on this Project</a>
+                    <div class="project-links">
+                        <a href="#" class="project-live-demo">Live Demo</a>
+                        <a href="#" class="project-github-link">Github Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-navigation">
+                <span class="nav-previous">&laquo; Previous</span>
+                <span class="nav-page-number">1</span>
+                <span class="nav-next">Next &raquo;</span>
+            </div>
+        </div>
+    </section> -->
+
     <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
@@ -313,6 +375,5 @@
             });
         });
     </script>
-
 </body>
 </html>
